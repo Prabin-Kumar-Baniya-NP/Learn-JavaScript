@@ -21,14 +21,39 @@ console.log("Data type of random variable is " + typeof(random));
 console.log(i_am_not_num);
 console.log("Data type of i_am_not_num variable is " + typeof(i_am_not_num));
 //****************************************************************************************************** */
-var operation1 = 2 + 5;
-var operation2 = 2 * 5;
-var operation3 = 2 / 5;
-var operation4 = 2 ^ 5;
+// Arithmetic Operators
+var operation1 = 6 + 2 - 5; // Addition, Substraction
+var operation2 = 2 * 5; // Multiplication
+var operation3 = 2 / 5; // Division
+var operation4 = 2 ** 5; // Exponential
 console.log(`
     ${operation1}
     ${operation2}
     ${operation3}
     ${operation4}
 `);
+
+// Bitwise Operators
+var operation5 = 10 & 2;        // Bitwise And
+var operation6 = 10 | 2;        // Bitwise OR
+var operation7 = ~operation6;   // Bitwise NOT
+var operation8 = 10 ^ 2         // Bitwise XOR
+var operation9 = 10 << 2;       // Bitwise Left Shift
+var operation10 = 10 >> 2;      // Bitwise Right Shift
+
+// Logical Operators
+var operation11 = true || true;  // Logical OR
+var operation12 = true && false; // Logical AND
+var operation13 = !operation12;  // Logical NOT
+
+// Relational Operators
+var operation14 = 10 < 5;  // Less than
+var operation15 = 10 > 9;  // Greater than
+var operation16 = 10 <= 5; // Less or Equal to
+var operation17 = 11 >=11; // Greater than or Equal to
+
+// Conditional (Ternary) Operator
+var operation18 = 10 > 5 ? true : false;
+var operation19 = age > 18 ? "Can Vote": "Can't Vote";
+console.log(operation19);
 //****************************************************************************************************** */
