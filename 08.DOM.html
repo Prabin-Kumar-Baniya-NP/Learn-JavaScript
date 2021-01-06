@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1> Welcome to JavaScript Programming</h1>
+    <p class="language" id="py">John is learning Python. He is interested in <span>machine learning</span></p>
+    <p class="language" id="cpp">Albert is learning C++. He is highly interested in <span>Competitive Programming</span></p>
+    <p class="language" id="java">Lily is learning Java. She is interested in <span>backend development.</span></p>
+    <p class="language" id="js">Prabin is learning JavaScript. He is interested in <span>full stack development</span></p>
+    <hr>
+    <script>
+        // getElementById
+        document.write("getElementByID <br>");
+        var result1 = document.getElementById("js").innerText;
+        document.write(result1 + "<br>");
+
+        // getElementsByTagName
+        document.write("getElementsByTagName <br>");
+        var result2 = document.getElementsByTagName("p");
+        document.write(result2 + "<br>");
+        document.write(result2[0].innerText + "<br>");
+
+        // getElementsClassName
+        document.write("getElementsByClassName <br>");
+        var result3 = document.getElementsByClassName("langauage");
+        document.write(result3 + "<br>");
+        document.write(document.getElementsByClassName("language")[0].innerText + "<br>");
+
+        // querySelector - Selects on the basis of First Come First Select
+        document.write("querySelector <br>");
+        result4 = document.querySelector("p");   // returns first paragraph
+        result5 = document.querySelector("p, h1");  // returns h1 because h1 comes first i.e. before p
+        result6 = document.querySelector("span");  // returns span of first paragraph
+        result7 = document.querySelector("#py, #java, #cpp");
+        result8 = document.querySelector("#cpp, span");  // returms span because span comes first before cpp id
+        document.write(result4.innerText + "<br>");
+        document.write(result5.innerText + "<br>");
+        document.write(result6.innerText + "<br>");
+        document.write(result7.innerText + "<br>");
+        document.write(result8.innerText + "<br>");
+
+        // querySelectorAll - Selects all
+        document.write("querySelectorAll <br>");
+        result9 = document.querySelectorAll("p"); // selects all paragraph
+        result10 = document.querySelectorAll("p, h1");
+        result11 = document.querySelectorAll("h1, #cpp");
+        document.write(result9[3].innerText + "<br>");
+        document.write(result10[0].innerText + "<br>");
+        document.write(result11[0].innerText + "<br>");
+        document.write(result11[1].innerText + "<br>");
+        
+        // attribute selector
+        document.write("Attribute Selector using querySelectorAll <br>")
+        result12 = document.querySelectorAll("p[class]");  // selects all paragraph having attribute class
+        result13 = document.querySelectorAll("p[id = 'py'"); // selects the paragraph having attribute id and its value py
+        document.write(result12[3].innerText + "<br>");
+        document.write(result13[0].innerText + "<br>");
+    </script>
+</body>
+</html>
