@@ -32,8 +32,8 @@
 
         // querySelector - Selects on the basis of First Come First Select
         document.write("querySelector <br>");
-        result4 = document.querySelector("p");   // returns first paragraph
-        result5 = document.querySelector("p, h1");  // returns h1 because h1 comes first i.e. before p
+        result4 = document.querySelector("p, .language");   // returns first paragraph
+        result5 = document.querySelector("p, h1, .language");  // returns h1 because h1 comes first i.e. before p
         result6 = document.querySelector("span");  // returns span of first paragraph
         result7 = document.querySelector("#py, #java, #cpp");
         result8 = document.querySelector("#cpp, span");  // returms span because span comes first before cpp id
