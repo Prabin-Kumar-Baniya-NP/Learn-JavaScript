@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Project in JavaScript</title>
+    <style>
+        * {
+            background-color: rgb(71, 67, 67);
+        }
+
+        p {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+            font-size: 48px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <span id="counter"></span><br><span id="followers"></span>
+    </p>
+    <script>
+        var counter = document.getElementById("counter");
+        var followers = document.getElementById("followers");
+        count = 1;
+        setInterval(() => {
+            if (count <= 1000) {
+                counter.innerText = count;
+                count++;
+            }
+        }, 1);
+        setTimeout(() => {
+            followers.innerText = "Followers in Instagram";
+        }, 4500);
+    </script>
+</body>
+
+</html>
