@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Style</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="red">Red</div>
+    <div class="green">Green</div>
+    <div class="yellow">Yellow</div>
+    <div class="blue">Blue</div>
+    <div class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus odio repudiandae error
+        qui totam? Recusandae quos iure possimus, expedita provident, praesentium in mollitia minus assumenda ut
+        blanditiis iste voluptatem fugit.</div>
+
+    <script>
+        const red = document.querySelector(".red");
+        const blue = document.querySelector(".blue");
+        const yellow = document.querySelector(".yellow");
+        const green = document.querySelector(".green");
+        const paragraph = document.querySelector(".paragraph");
+
+        const get_background_color = (selected_element) => {
+            return window.getComputedStyle(selected_element).backgroundColor;
+        }
+        document.write("Background Color of red is " + get_background_color(red) + "<br>");
+        document.write("Background Color of green is " + get_background_color(green) + "<br>");
+        document.write("Background Color of blue is " + get_background_color(blue) + "<br>");
+        document.write("Background Color of yellow is " + get_background_color(yellow) + "<br>");
+
+        const change_color = (element, color = get_background_color(element)) => {
+            return element.addEventListener("click",() =>{
+                paragraph.style.backgroundColor = color; 
+            })
+        }
+
+        change_color(red);
+        change_color(green);
+        change_color(yellow);
+        change_color(blue);
+    </script>
+</body>
+
+</html>
