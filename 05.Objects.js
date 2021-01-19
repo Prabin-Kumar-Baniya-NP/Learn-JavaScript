@@ -17,9 +17,18 @@ var Student = function(first_name, last_name, country){
     this.country = country;
 }
 
+Student.prototype.get_first_name = function(){
+    console.log(`First name is ${this.first_name}`);
+}
+
 var john = new Student("John","Albert","USA");  // Creates a new Objects
 var sam = new Student("Sam","Chrits","Russia"); // Creates a new Objects
 
+john.get_first_name();
+
+if( sam.hasOwnProperty("first_name") == true){
+    sam.get_first_name();
+}
 console.log(john.first_name);
 console.log(sam.last_name);
 console.log(john.country);
