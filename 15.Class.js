@@ -3,14 +3,14 @@ class User{
         this.name = name;
         this.email = email;
     }
-    courseList = [];
+    #courseList = [];  // This is now private.
     
     enrollCourse(courseName){
-        this.courseList.push(courseName);
+        this.#courseList.push(courseName);
     }
 
     getCourseList(){
-        return this.courseList;
+        return this.#courseList;
     }
 }
 
