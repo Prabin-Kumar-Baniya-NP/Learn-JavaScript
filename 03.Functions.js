@@ -55,3 +55,10 @@ console.log(`a = ${a}`);  // 40
 console.log(`b = ${b}`);  // 30
 
 //****************************************************************************************************************** */
+// Self Executing Anonymous Function - OR - IIFE (Immediately Invoked Function Expression)
+(
+function ()
+{
+    console.log("Hi, We are still learning JavaScript");
+}
+)();
