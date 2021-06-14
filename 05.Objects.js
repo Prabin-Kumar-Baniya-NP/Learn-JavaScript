@@ -1,35 +1,50 @@
-var Prabin = {
-    First_name : "Prabin",
-    Last_name : "Baniya",
-    Country : "Nepal",
-    get_full_name: function (){
-        return this.First_name + " " + this.Last_name;
+// Defining Objects Using Object Literals
+
+let circle = {
+    radius: 4,
+    location : {
+        x: 1,
+        y: 2,
+    },
+    draw: function(){
+        console.log("Drawing Circle Using JavaScript");
+    } 
+}
+circle.draw();
+
+// Creating Objects Using Factory Function
+function createCircle(radius){
+    return {
+        radius,
+        draw: function(){
+            console.log("Drawing Circle Using JavaScript");
+        }
     }
 }
 
-console.log(Prabin.First_name);
-console.log(Prabin["Last_name"]);
-console.log(Prabin.get_full_name());
+const circle1 = createCircle(5);
+circle1.draw();
 
-var Student = function(first_name, last_name, country){
-    this.first_name = first_name;
-    this.last_name = last_name;
-    this.country = country;
+// Creating Objects Using Constructor Function
+function Rectangle (length, breadth){
+    this.length = length;
+    this.breadth = breadth;
+    this.area = function (){
+        console.log(this.length * this.breadth);
+    }
+}
+const rect1 = new Rectangle(2,3);
+rect1.area();
+
+// Enumerating Properties of the Objects
+for (let key in circle){
+    if (typeof circle[key] != "function")
+    console.log(key, circle[key]);
 }
 
-Student.prototype.get_first_name = function(){
-    console.log(`First name is ${this.first_name}`);
-}
+// To get the keys of objects
+const keys = Object.keys(circle)
 
-var john = new Student("John","Albert","USA");  // Creates a new Objects
-var sam = new Student("Sam","Chrits","Russia"); // Creates a new Objects
-
-john.get_first_name();
-
-if( sam.hasOwnProperty("first_name") == true){
-    sam.get_first_name();
-}
-console.log(john.first_name);
-console.log(sam.last_name);
-console.log(john.country);
-
+// To check property or methods of an object
+if ('radius' in circle)
+    console.log('yes');
