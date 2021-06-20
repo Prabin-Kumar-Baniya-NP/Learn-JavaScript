@@ -50,7 +50,6 @@ function count_many(...para){    // Rest Parameters
     return `You passed ${arguments.length} parameters and the parameters are ${para}`;
 }
 
-// Variables declarations are scanned and made undefined
 console.log(count_many_again);  // undefined
 var count_many_again = function (){
     return `Expecting undefined`;
