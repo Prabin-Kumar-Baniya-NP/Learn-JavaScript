@@ -36,6 +36,17 @@ function Rectangle (length, breadth){
 const rect1 = new Rectangle(2,3);
 rect1.area();
 
+
+// Creating objects using Object Constructor
+let cycle = new Object();
+cycle.Model = "XYZ";
+cycle["Price"] = 453264;
+cycle.getInfo =  function(){
+    return `Model is ${this.Model} and Price is ${this.Price}`;
+}
+
+console.log(cycle.getInfo());
+
 // Enumerating Properties of the Objects
 for (let key in circle){
     if (typeof circle[key] != "function")
